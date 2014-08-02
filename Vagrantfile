@@ -14,4 +14,5 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8888
 
   config.vm.synced_folder "webroot/", "/vagrant/webroot/", :owner => "www-data"
+  #:mount_options => ["dmode=777","fmode=666"]
 end
